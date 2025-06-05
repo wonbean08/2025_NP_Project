@@ -10,8 +10,6 @@ shuffleBtn.addEventListener("click", function () {
     cardTable.innerHTML = '';
     Deck.shuffleTrump();
     showCard();
-    Deck.shuffleTrump();
-    showCard();
 
     cards = document.getElementsByClassName("cell");
     cardAddEvnet();
@@ -42,18 +40,18 @@ function cardAddEvnet() {
 
             if (temp.length == 1) {
                 if(temp[0].id === this.id) {
-                    alert("동일함");
                     setTimeout(() => {
+                        alert("동일함");
                         temp.pop();
-                    }, 1000);
+                    }, 500);
                 }
                 else {
-                    alert("다름");
                     setTimeout(() => {
+                        alert("다름");
                         temp[0].innerHTML = `<img class="card" src="./imgs/Card_back.png">`;
                         this.innerHTML = `<img class="card" src="./imgs/Card_back.png">`;
                         temp.pop();
-                    }, 1000);
+                    }, 500);
                 }
             }
             else {

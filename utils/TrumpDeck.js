@@ -13,6 +13,11 @@ export function makeDeck() {
                 "imgPath": deckID + ".png",
                 "flag": false//뒤집을 수 있는 카드인지 판단
             });
+            deck.push({
+                "id": deckID,
+                "imgPath": deckID + ".png",
+                "flag": false//뒤집을 수 있는 카드인지 판단
+            });
         }
     }
 }
