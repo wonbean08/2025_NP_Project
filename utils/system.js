@@ -1,19 +1,14 @@
-import { deck, makeDeck, shuffle } from './TrumpDeck.js';
+import { deck, makeDeck } from './TrumpDeck.js';
 makeDeck();
 
 export function getDeck() {
-    //console.log(deck);
     return deck;
 }
 
-export function match(a,b){
-    return false;
-}
-
-export function showFront(a){
-
-}
-
+//덱 섞음
 export function shuffleTrump() {
-    shuffle();
+  for (let i = deck.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [deck[i], deck[j]] = [deck[j], deck[i]];
+  }
 }

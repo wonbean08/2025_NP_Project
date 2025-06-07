@@ -4,61 +4,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>foker</title>
-    <script src="main.js" type="module">
-    </script>
-    <style>
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/index.css" />
 
-        img {
-            width: 100%;
-        }
-
-        #cardGame {
-            margin-top: 10px;
-            display: flex;
-            justify-content: center;
-        }
-
-        #cards {
-            width: 98%;
-        }
-
-        .card:hover {
-            border: 1px solid black;
-            position: relative;
-            top: -5px;
-        }
-
-        .card {
-            border: 1px solid white;
-            border-radius: 7%;
-        }
-
-        .cell {
-            margin: 5px;
-            margin-bottom: 15px;
-        }
-
-    </style>
 </head>
 
 <body>
-    <div id="cardGame">
-        <table id="cards">
+    <div id="startScreen">
+        <h2>플레이어 이름을 입력하세요</h2>
+        <label for="user1" class="label">사용자 1</label>
+        <input type="text" id="user1" class="input" placeholder="플레이어 1 이름">
 
-        </table>
+        <label for="user2" class="label">사용자 2</label>
+        <input type="text" id="user2" class="input" placeholder="플레이어 2 이름">
+        <button id="startBtn" class="btn">시작</button>
     </div>
-    <div id="menus">
-        <button id="shuffleTrump">카드섞기</button>
-        <button id="give_up">포기</button>
-    </div>
-    <script>
 
-
-    </script>
-
+    
+    <script src="js/index.js"></script>
 </body>
-
-
 
 </html>

@@ -1,0 +1,144 @@
+/* 상단 바 (div a1) */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 15vh;
+    border-bottom: 1px solid #ddd;
+    padding: 0 10px;
+}
+
+/* 상단 왼쪽 영역 (아이콘 + 텍스트 + 버튼) */
+.info_left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* 아이콘 */
+.icon {
+    width: 7vh;
+    height: 7vh;
+    background-color: #eee;
+    border-radius: 50%;
+}
+
+/* 텍스트 */
+.text {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+/* 버튼 */
+.giveupBtn {
+    padding: 5px 10px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+/* 중앙 텍스트 박스 */
+.gamePlaying {
+    flex-grow: 1;
+    margin: 0 20px;
+    height: 10vh;
+    background-color: #f5f5f5;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 20px;
+    position: relative;
+}
+
+#gamePlaying {
+    font-size: 3vw;
+}
+
+/* 안내 문구 */
+#sign {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    bottom: 0px;
+}
+
+/* 상단 오른쪽 영역 (아이콘 + 텍스트) */
+.info_right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* 메인 영역 (div a2) */
+.playBoard {
+    flex-grow: 1;
+    margin: 20px 0;
+    border: 1px solid #ddd;
+    gap: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+/* 하단 버튼 */
+.startBtn {
+    display: block;
+    width: 120px;
+    margin: 0 auto;
+    padding: 10px 0;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 1px solid #888;
+    background-color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+.startBtn:hover {
+    background-color: #eee;
+}
+
+img {
+    width: 100%;
+}
+
+#cardGame {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+#cards {
+    width: 98%;
+}
+
+.card:hover {
+    border: 1.5px solid black;
+    position: relative;
+    top: -5px;
+}
+
+.card {
+    border: 1.5px solid white;
+    border-radius: 7%;
+}
+
+.cell {
+    margin: 5px;
+    margin-bottom: 15px;
+}
+
+.blue-glow-effect {
+    /* x-offset | y-offset | blur-radius | spread-radius | color */
+    box-shadow: 0 0 8px rgba(0, 191, 255, 0.8),
+        /* 옅은 파란 빛 */
+        0 0 15px rgba(0, 191, 255, 0.6),
+        /* 좀 더 퍼지는 파란 빛 */
+        0 0 22px rgba(0, 191, 255, 0.4);
+    /* 더 넓게 퍼지는 파란 빛 */
+
+    /* 필요에 따라 원하는 색상(예: #00f 파란색)과 강도로 조정 가능 */
+    /* box-shadow: 0 0 10px #00f, 0 0 20px #00f, 0 0 30px #00f; */
+}
+
+.selectCard {
+    border: 1.5px solid red;
+    border-radius: 7%;
+}

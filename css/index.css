@@ -1,0 +1,61 @@
+#startScreen {
+    display: block;
+    width: 70%;
+    height: 90vh;
+    margin: auto;
+    position: relative;
+    box-shadow: 0 12px 15px 0 rgba(0, 0, 0, .24), 0 17px 50px 0 rgba(0, 0, 0, .19);
+    padding: 90px 70px 50px 70px;
+    background-color: rgba(40, 57, 101, 0.9);
+    color: #fff;
+    box-sizing: border-box;
+    border-radius: 8px;
+}
+
+#startScreen h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+#startScreen .label {
+    display: block;
+    color: #aaa;
+    font-size: 12px;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+
+#startScreen .input {
+    width: 100%;
+    padding: 15px 20px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 25px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+#startScreen .input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+#startScreen .btn {
+    width: 100%;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 25px;
+    background: #1161ee;
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background 0.3s ease;
+}
+
+.screen .btn:hover {
+    background: #0e4fbe;
+}
