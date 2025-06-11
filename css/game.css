@@ -1,10 +1,14 @@
 /* 상단 바 (div a1) */
+body {
+    margin: 8px;
+}
+
 header {
     display: flex;
     align-items: center;
     justify-content: space-between;
     height: 15vh;
-    margin-top: -1vh;
+    margin-top: -2vh;
     border-bottom: 1px solid #ddd;
     padding: 0 10px;
 }
@@ -50,17 +54,20 @@ header {
 }
 
 #gamePlaying {
-    font-size: 2.8vw;
-    margin-top: -0.5vh;
+    font-size: 2.4vw;
+    margin-top: -0.8vh;
 }
 
 /* 안내 문구 */
 #sign {
     position: absolute;
     left: 50%;
+    width: 100%;
     transform: translate(-50%, 0);
     bottom: 0px;
+    font-size: 1.5vw;
 }
+
 
 /* 상단 오른쪽 영역 (아이콘 + 텍스트) */
 .info_right {
@@ -72,10 +79,11 @@ header {
 /* 메인 영역 (div a2) */
 #playBoard {
     flex-grow: 1;
-    margin: 20px 0;
+    margin: 20px auto;
     border: 1px solid #ddd;
+    border-radius: 5px;
     gap: 10px;
-    padding: 10px;
+    padding: 5px;
     box-sizing: border-box;
 }
 
@@ -97,29 +105,41 @@ header {
     pointer-events: none;
 }
 
-img {
+.iconImg {
     width: 100%;
 }
 
+/* main {
+    display: flex;
+} */
+
+/* .cardTable {
+    justify-content: center;
+} */
+
 #cardGame {
-    margin-top: 10px;
+    margin-top: 5px;
     display: flex;
     justify-content: center;
 }
 
 #cards {
-    width: 98%;
+    padding: 0px;
 }
 
-.card:hover {
+.unselectCard:hover {
     border: 1.5px solid black;
+    border-radius: 10px;
     position: relative;
-    top: -5px;
+    top: -3px;
+}
+
+.unselectCard {
+    border: 1.5px solid white;
 }
 
 .card {
-    border: 1.5px solid white;
-    border-radius: 7%;
+    width: 100%;
 }
 
 .cell {
@@ -142,5 +162,10 @@ img {
 
 .selectCard {
     border: 1.5px solid red;
-    border-radius: 7%;
+    border-radius: 10px;
+}
+
+.score {
+    text-align: center;
+    margin: 0px;
 }

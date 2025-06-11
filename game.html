@@ -12,10 +12,14 @@
     <header>
         <div class="info_left">
             <div class="icon" id="icon1">
-                <img src="imgs/icon.png" alt="">
+                <img src="imgs/icon.png" class="iconImg">
             </div>
-            <div class="text" id="showName1">이름</div>
-            <div class="text" id="userScore1">0</div>
+            <div class="userInfo">
+                <div class="text" id="showName1">이름</div>
+                <div>
+                    <p class="text score" id="userScore1">0점</p>
+                </div>
+            </div>
             <button class="guBtn" id="give_up1">포기</button>
         </div>
 
@@ -26,23 +30,28 @@
 
         <div class="info_right">
             <div class="icon" id="icon2">
-                <img src="imgs/icon.png" alt="">
+                <img src="imgs/icon.png" alt="" class="iconImg">
             </div>
-            <div class="text" id="showName2">이름</div>
-            <div class="text" id="userScore2">0</div>
+            <div class="userInfo">
+                <div class="text" id="showName2">이름</div>
+                <div>
+                    <p class="text score" id="userScore2">0점</p>
+                </div>
+            </div>
             <button class="guBtn" id="give_up2">포기</button>
         </div>
     </header>
 
+    <main>
+        <div id="playBoard">
+            <table id="cardTable">
 
-    <div id="playBoard">
-        <table id="cards">
+            </table>
+        </div>
 
-        </table>
-    </div>
-
-    <button id="shuffleTrump" class="startBtn">카드섞기</button>
-    </div>
+        
+    </main>
+        <button id="shuffleTrump" class="startBtn">카드섞기</button>
 
     <script>
         const url = new URL(window.location.href);
@@ -51,8 +60,8 @@
         showName2.innerText = urlParams.get('user2');
     </script>
 
-    <script src="js/main.js" type="module"> 
-        
+    <script src="js/main.js" type="module">
+
     </script>
 </body>
 

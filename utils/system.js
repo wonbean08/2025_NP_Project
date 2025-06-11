@@ -1,8 +1,10 @@
-import { deck, makeDeck } from './TrumpDeck.js';
-makeDeck();
+import { deck, createDeck } from './TrumpDeck.js';
+export function makeDeck(difficulty) {
+  createDeck(difficulty);
+}
 
 export function getDeck() {
-    return deck;
+  return deck;
 }
 
 //덱 섞음
