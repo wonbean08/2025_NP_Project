@@ -85,7 +85,6 @@ function showCard() {
 }
 
 function countDown(second) {
-
     let cnt = second;
     const count = setInterval(() => {
         if (cnt == 0) {
@@ -105,9 +104,11 @@ shuffleBtn.addEventListener("click", function () {
     shuffleBtn.classList.remove("startBtnHover");
     give_up2.disabled = true;
     give_up1.disabled = false;
+    resetBoard()
 
     const second = 5;
     Deck.shuffleTrump();
+    cardTable.innerHTML = '';
     showCard();
     countDown(second);
     let StartTimeout = setTimeout(() => {
@@ -118,23 +119,17 @@ shuffleBtn.addEventListener("click", function () {
         gamePlaying.innerText = `플레이어 ${user1}의 차례`;
     }, (second + 1) * 1000);
 
-
-
 });
 
 
 function cardAddEvnet() {
-
-
     for (const item of cards) {
         item.addEventListener("click", function () {
             //console.log(`./imgs/${this.id}.png>`);
             // item.removeChild(item.childNodes[0]);
             // let img = document.createElement('img');
-            if (selectedCards.length > 0) {
-                if (lockBoard || this.classList.contains('selectCard')) {
-                    return;
-                }
+            if (this.classList.contains('selectCard') || lockBoard) {
+                return;
             }
 
             this.childNodes[0].src = `./imgs/${this.id}.png`;
@@ -176,15 +171,16 @@ function cardAddEvnet() {
                 alert("게임 종료!");
                 let text = '';
                 if (score[0] > score[1]) {
-                    text = user1+"님이 승리했습니다!";
+                    text = user1 + "님이 승리했습니다!";
                 }
                 else if (score[1] > score[0]) {
-                    text = user2+"님이 승리했습니다!";
+                    text = user2 + "님이 승리했습니다!";
                 }
                 else {
                     text = "동점입니다!"
                 }
-                sign.innerText = text
+                sign.innerText = text;
+                lockBoard = true;
             }
             //console.log(selectedCards);
         });
@@ -195,9 +191,6 @@ function resetBoard() {
     selectedCards = [];
     lockBoard = false;
 }
-
-
-
 
 give_up1.addEventListener("click", function () {
     if (giveupTurn[1] == true) {
@@ -229,3 +222,5 @@ function restart() {
         sign.innerText = "시작할려면 카드 섞기를 눌러주세요!";
     }
 }
+
+showCard();
