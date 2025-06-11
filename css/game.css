@@ -1,9 +1,10 @@
 /* 상단 바 (div a1) */
-.header {
+header {
     display: flex;
     align-items: center;
     justify-content: space-between;
     height: 15vh;
+    margin-top: -1vh;
     border-bottom: 1px solid #ddd;
     padding: 0 10px;
 }
@@ -49,7 +50,8 @@
 }
 
 #gamePlaying {
-    font-size: 3vw;
+    font-size: 2.8vw;
+    margin-top: -0.5vh;
 }
 
 /* 안내 문구 */
@@ -68,7 +70,7 @@
 }
 
 /* 메인 영역 (div a2) */
-.playBoard {
+#playBoard {
     flex-grow: 1;
     margin: 20px 0;
     border: 1px solid #ddd;
@@ -91,8 +93,8 @@
     transition: background-color 0.3s ease;
 }
 
-.startBtn:hover {
-    background-color: #eee;
+.startBtnHover:hover {
+    pointer-events: none;
 }
 
 img {
