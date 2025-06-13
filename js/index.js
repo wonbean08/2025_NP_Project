@@ -12,6 +12,7 @@ startBtn.addEventListener('click', () => {
         alert("닉네임은 중복될 수 없습니다");
     }
     else {
-        location.href = `game.html?user1=${userName1}&user2=${userName2}&difficulty=${1}`; //difficulty=${} <= 이 활호안에 숫자 1, 2, 3 넣으면 쉬움, 보통, 어려움으로 지정됨
+        let difficulty=document.getElementById("difficulty").value;
+        location.href = `game.html?user1=${userName1}&user2=${userName2}&difficulty=${difficulty}`; //difficulty=${} <= 이 활호안에 숫자 1, 2, 3 넣으면 쉬움, 보통, 어려움으로 지정됨
     }
 });

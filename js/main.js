@@ -24,6 +24,8 @@ let score = [0, 0];
 let deck;
 let lockBoard = false;
 
+Deck.makeDeck
+
 let currentPlayerIndex = 0;
 let giveupTurn = [false, false];
 

@@ -1,11 +1,11 @@
 #startScreen {
     display: block;
-    width: 70%;
+    width: 40%;
     height: 90vh;
     margin: auto;
     position: relative;
     box-shadow: 0 12px 15px 0 rgba(0, 0, 0, .24), 0 17px 50px 0 rgba(0, 0, 0, .19);
-    padding: 90px 70px 50px 70px;
+    padding: 90px 70px 60px 70px;
     background-color: rgba(40, 57, 101, 0.9);
     color: #fff;
     box-sizing: border-box;
@@ -54,8 +54,30 @@
     cursor: pointer;
     text-transform: uppercase;
     transition: background 0.3s ease;
+
+    /* 바닥에서 90px 간격 유지 */
+    position: absolute; /* 부모를 기준으로 절대 위치 설정 */
+    bottom: 90px; /* 부모 div의 바닥에서 90px 위로 정렬 */
+    /* 부모의 padding-left, padding-right를 고려하여 좌우 위치 조정 */
+    left: 70px;
+    right: 70px;
+    width: calc(100% - 140px); /* 좌우 padding 70px씩 총 140px 제외한 너비 */
+    box-sizing: border-box; /* padding과 border를 width 계산에 포함 */
 }
+
 
 .screen .btn:hover {
     background: #0e4fbe;
+}
+
+#difficulty{
+    width: 100%;
+    padding: 15px 20px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 25px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    font-size: 14px;
+    box-sizing: border-box;
 }
